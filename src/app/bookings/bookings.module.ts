@@ -1,3 +1,4 @@
+import { CreateBookingComponent } from './create-booking/create-booking.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,6 @@ import { BookingsPage } from './bookings.page';
     IonicModule,
     BookingsPageRoutingModule
   ],
-  declarations: [BookingsPage]
+  declarations: [BookingsPage, CreateBookingComponent]
 })
 export class BookingsPageModule {}

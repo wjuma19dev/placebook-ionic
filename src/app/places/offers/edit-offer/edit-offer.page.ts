@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-edit-offer',
   templateUrl: './edit-offer.page.html',
@@ -11,5 +10,6 @@ export class EditOfferPage implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

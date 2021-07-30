@@ -1,3 +1,6 @@
+import { PlaceService } from './../place.service';
+import { Place } from './../place.model';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffersPage implements OnInit {
 
-  constructor() { }
+  public places: Place[];
+
+  constructor(
+    private router: Router,
+    private placeService: PlaceService
+  ) { }
 
   ngOnInit() {
+    this.places = this.placeService.places;
+  }
+
+  onClick() {
+    this.router.navigate(['/places/tabs/offers/new']);
+  }
+
+  onPlaceDetailNavigate(place: Place) {
+    this.router.navigate(['/', 'places', 'tabs', 'offers', place.id]);
   }
 
 }
